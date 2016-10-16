@@ -1,7 +1,6 @@
-
+import copy
 
 class Element():
-
 
 	def __init__(self):
 
@@ -35,8 +34,9 @@ class Element():
 		rule1 = self_race == other_race and self_race == Element
 		rule2 = self_race == Element and other_race == "".__class__
 		rule3 = self_race == "".__class__ and Element
+		rule4 = self is not other
 
-		if rule1 or rule2 or rule3:
+		if (rule1 or rule2 or rule3) and rule4:
 
 			return True
 
@@ -321,6 +321,38 @@ class Element():
 					raise AttributeError
 
 		return setter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

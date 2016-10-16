@@ -1,4 +1,6 @@
 
+import copy
+
 from Element import Element
 
 class div(Element): pass
@@ -6,25 +8,11 @@ class img(Element): pass
 class a(Element): pass
 
 
+kkk = div()._class("box box-solid")
 
-x = div()
-y = a()
+kkk < a()._href("emre.cintay.com") < div()._class("image thumbnail soft") < img()._src("emre.cintay.com/images/profile.png")
 
-
-x = y + a()._href("elemanlar 1") + a()._href("elemanlar 2")
-
-y._href("emre")
-
-print(x.render())
-
-x[0]._href("denemecibaba")
-
-print(x.render())
-
-
-
-
-
+print(kkk.render())
 
 
 
